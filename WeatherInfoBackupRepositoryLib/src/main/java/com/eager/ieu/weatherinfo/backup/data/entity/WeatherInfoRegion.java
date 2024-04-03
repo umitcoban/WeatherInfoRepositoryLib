@@ -5,11 +5,11 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "weather_info_locations")
+@Table(name = "weather_info_regions")
 public class WeatherInfoRegion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "weather_info_location_id")
+    @Column(name = "weather_info_region_id")
     public long id;
 
     public String observation;
@@ -51,8 +51,8 @@ public class WeatherInfoRegion {
     public String cloudsCode;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "place_info_by_location", nullable = false)
-    public PlaceInfoLocation m_placeInfoLocation;
+    @JoinColumn(name = "region", nullable = false)
+    public PlaceInfoRegion placeInfoRegion;
 
     @Override
     public int hashCode()
