@@ -14,8 +14,6 @@ import org.springframework.stereotype.Component;
 public class WeatherInfoDailyDataHelper {
     private final IWeatherInfoLocationRepository m_weatherInfoLocationRepository;
 
-    private int x;
-
     private final IPlaceInfoRegionRepository m_placeInfoRegionRepository;
 
     private final IPlaceInfoLocationRepository m_placeInfoByLocationRepository;
