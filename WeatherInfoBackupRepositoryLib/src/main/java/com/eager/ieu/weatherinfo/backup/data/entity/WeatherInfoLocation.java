@@ -6,11 +6,11 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Entity
-@Table(name = "weather_info_regions")
+@Table(name = "weather_info_locations")
 public class WeatherInfoLocation {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "weather_info_region_id")
+    @Column(name = "weather_info_location_id")
     public long id;
 
     public int elevation;
@@ -60,8 +60,8 @@ public class WeatherInfoLocation {
     public int hectoPascAltimeter;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "place_info_region", nullable = false)
-    public PlaceInfoRegion placeInfoRegion;
+    @JoinColumn(name = "place_name", nullable = false)
+    public PlaceInfoLocation placeInfoLocation;
 
     @Override
     public int hashCode()

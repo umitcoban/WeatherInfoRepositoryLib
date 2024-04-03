@@ -13,7 +13,7 @@ public class PlaceInfoLocation {
 
     public double longitude;
 
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "weather_info_location", cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "weather_info_locations", cascade = CascadeType.ALL)
     public WeatherInfoLocation weatherInfoLocation;
 
     @Override

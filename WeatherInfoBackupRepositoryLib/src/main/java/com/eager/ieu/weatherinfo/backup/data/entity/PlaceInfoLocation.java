@@ -15,7 +15,7 @@ public class PlaceInfoLocation {
 
     public double longitude;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "weather_info_location", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "weather_info_locations", cascade = CascadeType.ALL)
     public Set<WeatherInfoRegion> weatherInfoLocations;
 
     @Override
